@@ -1,0 +1,116 @@
+/* Campus Bridge design tokens. Components read these; no raw hex values live in component CSS. */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg: #faf8f4;
+  --surface: #ffffff;
+  --surface-sunken: #f4f1ea;
+  --surface-hover: #f7f5f0;
+
+  /* Text */
+  --ink: #14202e;
+  --ink-2: #364352;
+  --muted: #5b6776;
+
+  /* Lines */
+  --line: #e6e1d8;
+  --line-strong: #cfc8ba;
+
+  /* Brand accent (progress, positive, primary actions) */
+  --accent: #0b6e65;
+  --accent-hover: #09594f;
+  --accent-press: #07463f;
+  --accent-soft: #e1f0ed;
+  --on-accent: #ffffff;
+
+  /* Semantic */
+  --danger: #b3261e;
+  --danger-hover: #8f1e18;
+  --danger-soft: #fbeae8;
+  --warn: #85560a;
+  --warn-soft: #faf0d9;
+  --info: #2b5384;
+  --info-soft: #e6edf6;
+  --ok: #1c6e3f;
+  --ok-soft: #e2f2e8;
+
+  /* Pipeline stages (text on soft background; each pair is >= 4.5:1) */
+  --stage-saved: #4a5563;
+  --stage-saved-bg: #eceae5;
+  --stage-applied: #2b5384;
+  --stage-applied-bg: #e6edf6;
+  --stage-assessment: #85560a;
+  --stage-assessment-bg: #faf0d9;
+  --stage-interview: #0b6e65;
+  --stage-interview-bg: #e1f0ed;
+  --stage-offer: #1c6e3f;
+  --stage-offer-bg: #d9f0e2;
+  --stage-rejected: #a3342b;
+  --stage-rejected-bg: #fae6e3;
+
+  /* Chart series: fixed order, validated with the dataviz palette checker
+     (lightness band, chroma floor, CVD + normal-vision separation, 3:1 contrast on the chart surface). */
+  --chart-1: #0a9482; /* teal  */
+  --chart-2: #3b73d1; /* blue  */
+  --chart-3: #b97708; /* amber */
+  --chart-4: #cc4b3f; /* red   */
+  --chart-neutral: #8b95a3;
+  --chart-grid: #e6e1d8;
+  --chart-axis: #5b6776;
+
+  /* Type */
+  --font-ui: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+
+  /* Space (4px base) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.25rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-10: 2.5rem;
+  --s-12: 3rem;
+  --s-16: 4rem;
+
+  /* Shape and depth */
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --shadow-sm: 0 1px 2px rgb(20 32 46 / 0.06);
+  --shadow-md: 0 4px 16px rgb(20 32 46 / 0.08), 0 1px 3px rgb(20 32 46 / 0.06);
+  --shadow-lg: 0 18px 48px rgb(20 32 46 / 0.14), 0 2px 8px rgb(20 32 46 / 0.06);
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+
+  /* Layout */
+  --sidebar-w: 15.5rem;
+  --bottom-nav-h: 3.5rem;
+  --content-max: 76rem;
+  --gutter: 1rem;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --gutter: 1.5rem;
+  }
+}
+@media (min-width: 1100px) {
+  :root {
+    --gutter: 2rem;
+  }
+}

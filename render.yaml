@@ -1,0 +1,29 @@
+# Render Blueprint for the API. The frontend is deployed separately on Vercel (see README).
+services:
+  - type: web
+    name: campus-bridge-api
+    runtime: node
+    rootDir: server
+    # devDependencies (typescript) are needed to compile, so install them explicitly.
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22
+      - key: DATABASE_URL
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_JWT_SECRET
+        sync: false
+      - key: SUPABASE_STORAGE_BUCKET
+        value: resumes
+      - key: HEALTH_CHECK_TOKEN
+        generateValue: true

@@ -1,0 +1,25 @@
+{
+  "name": "campus-bridge",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Campus Bridge - placement and internship tracker with GDG Edge analytics (PERN monorepo)",
+  "workspaces": ["client", "server"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w server && npm run build -w client",
+    "check": "npm run check -w server && npm run check -w client",
+    "test": "npm run test -w server",
+    "migrate": "npm run migrate -w server",
+    "seed": "npm run seed -w server",
+    "seed:reset": "npm run seed:reset -w server",
+    "qa:responsive": "node scripts/qa-responsive.mjs",
+    "e2e:smoke": "node scripts/e2e-smoke.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "playwright-core": "^1.64.1"
+  }
+}
